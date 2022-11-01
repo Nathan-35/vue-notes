@@ -1,16 +1,16 @@
 export const app = {
-  title: 'Template',
+  title: 'Notes'
 }
 
 export const links = [
   {
     title: 'Home',
     alias: 'home',
-    url: '/',
+    url: '/'
   },
   {
     title: 'About',
     alias: 'about',
-    url: '/about',
-  },
+    url: '/about'
+  }
 ]
