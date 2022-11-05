@@ -16,11 +16,9 @@ export default {
             notes: [
                 {
                     title: 'Learn to Vue 3',
-                    tags: ['work']
                 },
                 {
                     title: 'Finish course',
-                    tags: ['work', 'home']
                 }
             ]
         }
@@ -29,9 +27,8 @@ export default {
         handleSubmit(title) {
             const note = {
                 title: title,
-                tags: []
             }
-            title ? this.notes.push(note) : null
+            this.notes.push(note)
         },
         handleRemove(index) {
             this.notes.splice(index, 1)

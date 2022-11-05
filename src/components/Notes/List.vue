@@ -5,9 +5,6 @@
                 <p>{{ note.title }}</p>
                 <p style="cursor:pointer;" @click="$emit('onRemove', index)">&#10005;</p>
             </div>
-            <div class="note-footer">
-                <TagsList isPreview v-if="note.tags && note.tags.length > 0" :items="note.tags" />
-            </div>
         </div>
     </div>
 </template>

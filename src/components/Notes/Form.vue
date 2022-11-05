@@ -1,8 +1,7 @@
 <template>
     <div class="note-form__wrapper">
         <form class="note-form" @submit.prevent="onSubmit">
-            <textarea type="text" v-model="value" placeholder="Type ur note" />
-            <TagsList @onItemClick="handleTagClick" :items="tags" />
+            <textarea required type="text" v-model="value" placeholder="Type ur note" />
             <button class="btn btnPrimary" type="submit">Add note</button>
         </form>
     </div>
@@ -16,16 +15,12 @@ export default {
     data() {
         return {
             value: '',
-            tags: ['home', 'work', 'travel']
         }
     },
     methods: {
         onSubmit() {
             this.$emit('onSubmit', this.value)
             this.value = ''
-        },
-        handleTagClick(tag) {
-            console.log(tag)
         }
     }
 }
@@ -44,9 +39,5 @@ export default {
     align-items: flex-end;
     max-width: 600px;
     width: 100%;
-
-    textarea {
-        margin-bottom: 0;
-    }
 }
 </style>

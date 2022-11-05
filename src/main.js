@@ -6,7 +6,4 @@ import './assets/scss/main.scss'
 
 const app = createApp(App)
 
-app
-    .use(routers)
-    .mount('#app')
-
+app.use(routers).mount('#app')
